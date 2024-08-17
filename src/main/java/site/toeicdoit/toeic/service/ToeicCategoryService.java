@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface ToeicCategoryService extends QueryService<ToeicCategoryDto>, CommandService<ToeicCategoryDto> {
 
+
     default ToeicCategoryModel dtoToEntity(ToeicCategoryDto dto) {
         return ToeicCategoryModel.builder()
                 .id(dto.getId())
@@ -18,6 +19,7 @@ public interface ToeicCategoryService extends QueryService<ToeicCategoryDto>, Co
     }
 
     default ToeicCategoryDto entityToDto(ToeicCategoryModel entity) {
+
         return ToeicCategoryDto.builder()
                 .id(entity.getId())
                 .title(entity.getTitle())
@@ -26,7 +28,6 @@ public interface ToeicCategoryService extends QueryService<ToeicCategoryDto>, Co
                 .take(entity.isTake())
                 .build();
     }
-
 
 
 }

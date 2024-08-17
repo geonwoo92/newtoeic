@@ -27,20 +27,7 @@ public class ToeicCategoryServiceImpl implements ToeicCategoryService {
 
     @Override
     public Messenger save(ToeicCategoryDto toeicCategoryDto) {
-        try {
-            ToeicCategoryModel entity = dtoToEntity(toeicCategoryDto);
-            toeicCategoryRepository.save(entity);
-            return Messenger.builder()
-                    .message("Successfully saved")
-                    .state(true)
-                    .build();
-        } catch (Exception e) {
-            log.error("Error saving ToeicCategoryDto: ", e);
-            return Messenger.builder()
-                    .message("Error saving data")
-                    .state(false)
-                    .build();
-        }
+        return null;
     }
 
     @Override

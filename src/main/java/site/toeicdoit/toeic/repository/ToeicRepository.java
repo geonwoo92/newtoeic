@@ -19,8 +19,8 @@ public interface ToeicRepository extends JpaRepository<ToeicModel, Long> {
     List<ToeicModel> findAllByUserId(@Param("userId") Long userId);
 
 
-    @Query("SELECT tm FROM ToeicModel tm WHERE tm.toeicCategoryId.id = :categoryId")
-    List<ToeicModel> findAllByExam(@Param("categoryId") Long categoryId);
+    @Query("SELECT tm FROM ToeicModel tm WHERE tm.toeicCategoryId.testType = 'exam' ")
+    List<ToeicModel> findAllByExam();
 
     @Query("select tm from ToeicModel tm where tm.toeicCategoryId.testType = 'test'")
     List<ToeicModel> findAllByTest();
