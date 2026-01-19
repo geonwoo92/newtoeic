@@ -1,3 +1,4 @@
+```mermaid
 flowchart LR
   A[입력 RGB 카메라 프레임] --> B[프레임 전처리<br/>Resize / Normalize / ROI]
   B --> C[YOLO 객체 검출<br/>Person BoundingBox]
